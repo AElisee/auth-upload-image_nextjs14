@@ -1,0 +1,32 @@
+PROCECUS DE D'AUTHENTIFICATION
+
+// installer authjs  (suivre les etapes du site)
+ 
+
+1. COTE CLIENT
+// CREER LE FORMULAIRE D'ENREGISTREMENT dans src/app/(auth)/register
+// créer la fonction register au submit 
+// Configurer les routes dans navbar si session existe ou non et si admin ou non
+
+//--> Après l'inscription 
+// CREER LE FORMAULAIRE  LOGIN
+// Créer la fonction de login
+// Dans credentialsProvider de du fichier auth.js écrire la logique de comparaison des données du formulaire et la base de données
+
+//--> Après la connection
+// Gerer LES MIDDLEWARES POUR BLOQUER L'ACCES AUX PAGE NON AUTORISEES
+// Pour ce faire, dans le dossier scr/ créer un fichier middleware
+// Dans auth, ajouter callbacks/autorized
+// Pour gérer les conflit entre le middleware et nodejs à cause des librairies comme bcrypt...
+il faut creer un noveau fichier auth.config dans le dossier lib/
+// importer authConfig dans le middleware
+// import authConfig dans auth.js dans nextAuth
+
+
+// Afin de pouvoir récuperer toutes les infos de l'utilisateur connecté,
+on va ajouter dans le callbacks de authConfig/ jwt() et session()
+
+
+2. COTE API
+// CREER LA CONNEXION A LA BASE DE DONNEES
+// CREER LE MODEL
